@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LemonadeStand
 {
@@ -83,6 +84,31 @@ namespace LemonadeStand
             decimal totalExpenses3 = stand3.NumbCups * stand3.CostperCup;
             decimal totalProfit3 = revenue2 - totalExpenses2;
 
+            // LIST VERSION++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            List<LemonadeStand> locations = new List<LemonadeStand>();
+
+            for (int i = 0; i < 5; i++)     //5 Locations
+            {
+                locations.Add(new LemonadeStand());
+            }
+
+          
+            foreach (LemonadeStand stand in locations) ///locations?
+            {
+
+                //properties_________
+                stand.Name = Console.ReadLine();
+                stand.NumbCups = Int32.Parse(Console.ReadLine());
+                stand.PriceCups = decimal.Parse(Console.ReadLine());
+                stand.CostperCup = decimal.Parse(Console.ReadLine());
+                stand.NumCostumers = Int32.Parse(Console.ReadLine());
+
+                decimal revenueALL = stand.PriceCups * stand.NumCostumers;
+                decimal totalExpensesALL = stand.NumbCups * stand.CostperCup;
+                decimal totalProfitALL = revenueALL - totalExpensesALL;
+            }
+            //+++++++++++++++++++++++++++++++=
 
         }
     }
