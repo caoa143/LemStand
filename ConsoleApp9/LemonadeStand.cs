@@ -8,9 +8,16 @@ namespace LemonadeStand
     {
         public string Name { get; set; }
 
-        public int PriceCups { get; set; }
+        public decimal PriceCups { get; set; }
 
         public int NumbCups { get; set; }
+
+        //
+        public decimal CostperCup { get; set; }
+
+
+
+
 
 
 
